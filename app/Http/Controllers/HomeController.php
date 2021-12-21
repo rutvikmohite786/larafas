@@ -40,5 +40,8 @@ class HomeController extends Controller
         $fileds = Userfield::select('fields')->get();
         return view('controller.deleteview', ['usersfields' => $fileds]);
     }
-    
+    public function DataDisplayControllerIndex(){
+        $fileds = Userfield::select('fields')->get();
+        return view('controller.displaydataview', ['usersfields' => $fileds]);
+    }
 }

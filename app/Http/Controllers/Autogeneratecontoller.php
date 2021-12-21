@@ -30,4 +30,10 @@ class Autogeneratecontoller extends Controller
        $data['variableName3'] = $request->variable_name3;
        return view('controller.create', ['data' => $data]);
     }
+    public function display(Request $request){
+      $data['modelName']=$request->model_name;
+      $data['functionName']=$request->function_name;
+      $data['tableName']=$request->table_name;
+      
+    }
 }

@@ -26,6 +26,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/updatecontroller', [HomeController::class, 'UpdateControllerIndex'])->name('index.update');
     Route::get('/createcontroller', [HomeController::class, 'CreateControllerIndex'])->name('index.create');
     Route::get('/deletecontroller', [HomeController::class, 'DeleteControllerIndex'])->name('delete.create');
+    Route::get('/datadisplaycontroller', [HomeController::class, 'DataDisplayControllerIndex'])->name('display.controller');
+    Route::post('/display/data/controller',[Autogeneratecontoller::class,'display'])->name('getShowdata.controller');
     Route::post('/update/controller', [Autogeneratecontoller::class, 'update'])->name('controller.update');
     Route::post('/create/controller', [Autogeneratecontoller::class, 'create'])->name('controller.create');
     Route::post('/delete/controller', [Autogeneratecontoller::class, 'delete'])->name('controller.delete');
