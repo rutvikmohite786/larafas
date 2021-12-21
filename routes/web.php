@@ -32,6 +32,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/create/controller', [Autogeneratecontoller::class, 'create'])->name('controller.create');
     Route::post('/delete/controller', [Autogeneratecontoller::class, 'delete'])->name('controller.delete');
 
-    //for model
+    //for model route
 });
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
