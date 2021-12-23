@@ -31,9 +31,13 @@ class Autogeneratecontoller extends Controller
        return view('controller.create', ['data' => $data]);
     }
     public function display(Request $request){
+      if($request->inputs){
+         $data['selectfiled']=$request->inputs;
+      }
       $data['modelName']=$request->model_name;
       $data['functionName']=$request->function_name;
       $data['tableName']=$request->table_name;
+      return view('controller.displaydata', ['data' => $data]);
       
     }
 }

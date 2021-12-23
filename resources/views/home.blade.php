@@ -9,7 +9,7 @@
             <h5><a href="/createcontroller">create data</a></h5>
             <h5><a href="/updatecontroller">update data</a></h5>
             <h5><a href="/deletecontrolle">delete data</a></h5>
-            <h5><a href="/getdatacontroller">get a data</a></h5>
+            <h5><a href="/datadisplaycontroller">get a data</a></h5>
         </div>
     </div>
     <div class="row">
