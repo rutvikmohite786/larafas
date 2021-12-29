@@ -15,7 +15,10 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
+
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -23,10 +26,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </head>
 <style>
-  a{
+    a {
         text-decoration: none;
-        color:black;
-  }
+        color: black;
+    }
 </style>
 
 <body>

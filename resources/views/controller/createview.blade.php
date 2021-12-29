@@ -37,13 +37,25 @@
                 <div class="form-group">
 
                     <label for="exampleFormControlSelect1">how many filed you want to create:-</label>
-                  
+
                     <select id="dropdownlist">
                         @foreach($usersfields as $fields)
                         <option value='{{$fields->fields}}'>{{$fields->fields}}</option>
                         @endforeach
                     </select>
-                  
+
+                    <div id="inputArea" class="form-group"></div>
+                </div>
+                <div class="form-group">
+
+                    <label for="exampleFormControlSelect1">how many filed you want to create:-</label>
+
+                    <select id="dropdownlist">
+                        @foreach($usersfields as $fields)
+                        <option value='{{$fields->fields}}'>{{$fields->fields}}</option>
+                        @endforeach
+                    </select>
+
                     <div id="inputArea" class="form-group"></div>
                 </div>
                 <br>
@@ -57,15 +69,5 @@
         </div>
     </div>
 </div>
-<script>
-    $("#dropdownlist").change(function() {
-        var numInputs = $(this).val();
-        $("#fields").html('');
-        $("#inputArea").html('');
-        $("#title").html('');
-        for (var i = 0; i < numInputs; i++) {
-            $("#inputArea").append(+i + 1, ':-', '<input name="inputs[]" class="form-control" placeholder ="enter field value"/>');
-        }
-    });
-</script>
+<script src="{{asset('js/controller.js')}}"></script>
 @endsection
