@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Userfield;
+use App\Models\EmailSending;
 
 class HomeController extends Controller
 {
@@ -29,7 +30,8 @@ class HomeController extends Controller
     public function CreateControllerIndex(){
         
         $fileds= Userfield::select('fields')->get();
-        return view('controller.createview',['usersfields'=>$fileds]);
+        $email= EmailSending::select('value')->get();
+        return view('controller.createview',['usersfields'=>$fileds,'email'=>$email]);
     }
     public function UpdateControllerIndex(){
         $fileds = Userfield::select('fields')->get();

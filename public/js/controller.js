@@ -7,3 +7,4 @@ $("#dropdownlist").change(function () {
         $("#inputArea").append(+i + 1, ':-', '<input name="inputs[]" class="form-control" placeholder ="enter field value"/>');
     }
 });
+

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<!--<div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -73,5 +73,43 @@
             </div>
         </div>
     </div>
+</div>-->
+<div class="login-form">
+    <form method="POST" action="{{ route('register') }}">
+        @csrf
+        <h1>{{ __('Register') }}</h1>
+        <div class="content">
+            <div class="input-field">
+                <input type="text" placeholder="Name" autocomplete="nope" name="name" value="{{ old('email') }}" required autocomplete="name" autofocus>
+                @error('name')
+                <span class=" invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+                @enderror
+            </div>
+            <div class="input-field">
+                <input type="email" placeholder="Email" autocomplete="nope" name="email" value="{{ old('email') }}">
+                @error('email')
+                <span class=" invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+                @enderror
+            </div>
+            <div class="input-field">
+                <input type="password" placeholder="Password" autocomplete="new-password" name="password" required autocomplete="current-password">
+                @error('password')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+                @enderror
+            </div>
+            <div class="input-field">
+                <input type="password" placeholder="password-confirm" autocomplete="new-password" name="password_confirmation" required autocomplete="current-password">
+            </div>
+        </div>
+        <div class="action">
+            <button type="submit">{{ __('Register') }}</button>
+        </div>
+    </form>
 </div>
 @endsection

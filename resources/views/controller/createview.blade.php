@@ -51,8 +51,8 @@
                     <label for="exampleFormControlSelect1">you want to send email?</label>
 
                     <select id="dropdownlist">
-                        @foreach($usersfields as $fields)
-                        <option value='{{$fields->fields}}'>{{$fields->fields}}</option>
+                        @foreach($email as $value)
+                        <option value='{{$fields->fields}}'>{{$value->value}}</option>
                         @endforeach
                     </select>
 
