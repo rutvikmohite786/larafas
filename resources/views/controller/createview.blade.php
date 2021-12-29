@@ -48,7 +48,7 @@
                 </div>
                 <div class="form-group">
 
-                    <label for="exampleFormControlSelect1">how many filed you want to create:-</label>
+                    <label for="exampleFormControlSelect1">you want to send email?</label>
 
                     <select id="dropdownlist">
                         @foreach($usersfields as $fields)
